@@ -2,16 +2,14 @@
 class Database {
  protected $conexion;
   
- 
-     
   public function conectar()
 	{	
-		include("mysqli.inc.php");
+		include("dataAcces.php");
 		if(!isset($this->conexion))
 		{
 			
 		  $this->conexion = mysqli_connect($mysql_server,$mysql_login,$mysql_pass,$mysql_db,3306) or die(mysqli_error());
-		  //para conectar con RDS el Usuario es root y la pass pokeroot
+		 
 		  mysqli_set_charset($this->conexion, "utf8");
 		}	
 	}

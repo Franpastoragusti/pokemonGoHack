@@ -19,7 +19,10 @@
                     <input class="uk-width-1-4 uk-form-large" type="text" name='contraseña' id='contraseña' placeholder="Introduce tu contraseña">
             </div>
             <div class="uk-form-row">
-                <input type='submit' value='Entra' class="uk-width-1-4 uk-button uk-button-danger uk-button-large"/>
+                <input type='submit' value='Entra' class="uk-width-1-6 uk-button uk-button-danger uk-button-large"/>
+            </div>
+            <div id="registro" class="uk-form-row">
+                <a href="index.php/signIn" class="uk-width-1-6 uk-button uk-button-link uk-button-large">Registrate</a>
             </div>
         </form>
     </div>
