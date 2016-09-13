@@ -1,7 +1,8 @@
 #logg{
-
+	padding-top: 70px;
+	padding-right: 18px;
+	height: 500px;
 	background-image: url(../img/pokeball2.png);
-	background-size: 800px;
-	height: 800px;
+	background-size: 1000px;
 
 }

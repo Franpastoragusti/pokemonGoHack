@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
-	<div id="logg" class="uk-form-file uk-cover-background uk-width-medium-1-4 uk-container-center">
+	<div id="logg" class="uk-form-file uk-cover-background uk-width-medium-1-1 uk-container-center uk-text-center">
         <form class="uk-panel uk-form uk-border-rounded" action='index.php' method='post'>
 
             <div class="uk-form-row">
@@ -19,7 +19,7 @@
                     <input class="uk-width-1-4 uk-form-large" type="text" name='contraseña' id='contraseña' placeholder="Introduce tu contraseña">
             </div>
             <div class="uk-form-row">
-                <input type='submit' value='Entra' class="uk-width-1-4 uk-button uk-button-primary uk-button-small"/>
+                <input type='submit' value='Entra' class="uk-width-1-4 uk-button uk-button-danger uk-button-large"/>
             </div>
         </form>
     </div>
