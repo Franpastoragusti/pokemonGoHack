@@ -5,7 +5,7 @@
 
 		<title> POKEMON GO MAGAZINE</title>
 
-		
+		<link rel="stylesheet" type="text/css" href="">
 
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/css/uikit.min.css">
 
