@@ -1,3 +1,7 @@
-body{
-	background-color: red;
+#logg{
+
+	background-image: url(../img/pokeball2.png);
+	background-size: 800px;
+	height: 800px;
+
 }

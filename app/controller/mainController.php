@@ -1,4 +1,3 @@
 <?php
-
-echo "controller";
+require_once"pageGenerator.php";
 ?>
