@@ -11,7 +11,7 @@ class Database {
 		{
 			
 		  $this->conexion = mysqli_connect($mysql_server,$mysql_login,$mysql_pass,$mysql_db,3306) or die(mysqli_error());
-		  //para conectar con RDS el Usuario es admin y la pass 1234ABCD
+		  //para conectar con RDS el Usuario es root y la pass pokeroot
 		  mysqli_set_charset($this->conexion, "utf8");
 		}	
 	}
