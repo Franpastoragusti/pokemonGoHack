@@ -1,0 +1,46 @@
+#logo {
+
+  width: 50px;
+  height: 50px;
+
+  margin-top: 10px;
+}
+
+.uk-navbar-flip > .uk-navbar-nav > li {
+
+  color: white;
+
+}
+
+
+
+nav{
+
+  background-color: red;
+}
+
+.uk-navbar-center > li{
+
+  background-color: white;
+
+  
+}
+
+.uk-navbar {
+    background: transparent;
+    color: #444;
+}
+
+
+
+.logo {
+
+  margin-left: 50px;
+}
+
+body{
+
+  background-color: #333;
+}
+
+
