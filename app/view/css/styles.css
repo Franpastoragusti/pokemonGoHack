@@ -1,10 +1,10 @@
 #logg{
 
 	background-image: url(../img/pokeball2.png);
-	height: 600px;
-	padding-top: 250px;
+	height: 500px;
 	background-size: 1000px;
 	max-width: 800px;
+	padding-top: 140px;
 }
 
 #register{
@@ -15,8 +15,10 @@
 }
 #register input{
 	margin-top: 10px;
-
 }
 #logg input{
 	margin-right: 10px;
+}
+.uk-modal-dialog{
+	background: none;
 }
