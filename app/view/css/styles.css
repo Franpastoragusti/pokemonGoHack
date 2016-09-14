@@ -49,3 +49,6 @@
 .rating-star:hover ~ .rating-star {
           background-position: 0 0;
 }
+.uk-width-2-6{
+	padding-right: 10px;	
+}
