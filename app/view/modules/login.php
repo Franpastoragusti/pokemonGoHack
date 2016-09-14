@@ -7,8 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
-	<div id="logg" class="uk-form-file uk-cover-background uk-width-medium-1-1 uk-container-center uk-text-center">
-        <form class="uk-panel uk-form uk-border-rounded" action='index.php' method='post'>
+	<div id="main" class="uk-form-file uk-cover-background uk-width-medium-1-1 uk-container-center uk-text-center">
+        <form id="logg" class="uk-panel uk-form uk-border-rounded uk-cover-background" action='index.php' method='post'>
 
             <div class="uk-form-row">
                 <label for="user"></label>
@@ -20,9 +20,6 @@
             </div>
             <div class="uk-form-row">
                 <input type='submit' value='Entra' class="uk-width-1-6 uk-button uk-button-danger uk-button-large"/>
-            </div>
-            <div id="registro" class="uk-form-row">
-                <a href="index.php/signIn" class="uk-width-1-6 uk-button uk-button-link uk-button-large">Registrate</a>
             </div>
         </form>
     </div>

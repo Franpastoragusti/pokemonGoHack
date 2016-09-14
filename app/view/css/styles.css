@@ -1,13 +1,22 @@
 #logg{
-	padding-top: 70px;
-	padding-right: 18px;
-	height: 500px;
+
 	background-image: url(../img/pokeball2.png);
+	height: 600px;
+	padding-top: 250px;
 	background-size: 1000px;
 	max-width: 800px;
 }
 
-#registro{
-	padding-top: 70px;
-	padding-left:5px; 
+#register{
+	background-image: url(../img/pokedex.png);
+	background-size: 400px;
+	height: 600px;
+	padding-top: 250px;
+}
+#register input{
+	margin-top: 10px;
+
+}
+#logg input{
+	margin-right: 10px;
 }
