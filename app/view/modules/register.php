@@ -7,21 +7,28 @@
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
-	<div id="main" class="uk-form-file uk-cover-background uk-width-medium-1-1 uk-container-center uk-text-center">
-        <form id="logg" class="uk-panel uk-form uk-border-rounded uk-cover-background" action='index.php' method='post'>
+	<div id="main" class="uk-form-file uk-cover-background uk-width-medium-1-1 uk-container-center uk-text-center uk-height-viewport">
+        <form id="register" class=" uk-panel uk-form uk-cover-background uk-border-rounded" action='index.php' method='post'>
 
             <div class="uk-form-row">
                 <label for="user"></label>
                     <input class="uk-width-1-4 uk-form-large" type="text" name='user' id='user' placeholder="Introduce tu usuario">
             </div>
             <div class="uk-form-row">
-                <label for="password"></label>
-                    <input class="uk-width-1-4 uk-form-large" type="text" name='contraseña' id='contraseña' placeholder="Introduce tu contraseña">
+                <label for="pass"></label>
+                    <input class="uk-width-1-4 uk-form-large" type="text" name='pass' id='pass' placeholder="Introduce tu contraseña">
             </div>
+            <div class="uk-form-row">
+                <label for="validatePass"></label>
+                    <input class="uk-width-1-4 uk-form-large" type="text" name='validatePass' id='validatePass' placeholder="Confirma tu contraseña">
+            </div>
+               
             <div class="uk-form-row">
                 <input type='submit' value='Entra' class="uk-width-1-6 uk-button uk-button-danger uk-button-large"/>
             </div>
+            
         </form>
     </div>
+
 </body>
 </html>
