@@ -20,8 +20,9 @@
       <div  class="uk-navbar-flip">
 
         <ul class="uk-navbar-nav ">
-  					
-  				<li class="uk-button-danger"> <a href="#modalLogin" data-uk-modal>LOGIN</a></li>
+
+  				<li class="uk-button-danger"> <a href="#modalRegister" data-uk-modal><i class="uk-icon-sign-in"> SING IN</i></a></li>	
+  				<li class="uk-button-danger"> <a href="#modalLogin" data-uk-modal><i class="uk-icon-user"> LOGIN </i></a></li>
 
   			</ul>
 
@@ -33,11 +34,11 @@
 
 		<div class="uk-tab-center">
     		
-    		<ul class="uk-tab uk-animation-fade uk-animation-5" data-uk-tab>
+    		<ul class="uk-tab" data-uk-tab>
 
-    		<li> <a href="#Noticias" > NOTICIAS </a> </li>
-            <li> <a href="#news"> TIPS </a> </li>
-            <li> <a href="#modalRegister" data-uk-modal> FAIL </a> </li>
+    		    <li class="news"> <a href="#Noticias" class="enlaceNews"> NEWS </a> </li>
+            <li class="tips"> <a href="#news" class="enlaceTips"> TIPS </a> </li>
+            <li class="fail"> <a href="#fail" class="enlaceFail"> FAIL </a> </li>
 
     		</ul>
 
