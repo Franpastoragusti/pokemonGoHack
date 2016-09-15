@@ -52,3 +52,100 @@
 .uk-width-2-6{
 	padding-right: 10px;	
 }
+
+
+
+
+/* LOGO */
+
+.uk-navbar-nav > li > img {
+
+  width: 70px;
+  height: 70px;
+
+  margin-top: 10px;
+}
+
+.logo {
+
+  margin-left: 50px;
+}
+
+
+/* LOGUIN */
+
+.uk-navbar-nav > .uk-button-danger{
+
+  background-color: #FC222A;
+
+}
+
+.uk-navbar-nav > .uk-button-danger > a{
+
+  color: white;
+
+   font-size: 20px;
+}
+
+.uk-navbar-nav > .uk-button-danger > a:hover{
+
+  color: #FC222A;
+}
+
+
+/* NAVBAR2 */
+
+.uk-navbar-center > li{
+
+  background-color: white; 
+}
+
+.uk-navbar {
+    background: transparent;
+    color: #444;
+}
+
+.uk-navbar-center {
+    float: none;
+
+    text-align: center;
+
+    max-width: 50%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+.uk-tab > li {
+
+  background-color: white;
+
+  border-left: 2px solid #333;;
+
+  width: 25vw;
+
+  color: red;
+}
+
+.uk-tab > li > a{
+
+  font-size: 20px;
+
+  color: #2857BA;
+}
+
+
+#header{
+
+  background-color: #333;
+}
+#copyright{
+	 background-color: #333;
+	 color: #FFF;
+	 height: 50px;
+}
+#copyright{
+	padding-top: 15px;
+	padding-left: 10px;
+}

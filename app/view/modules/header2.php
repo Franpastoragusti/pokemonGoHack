@@ -9,7 +9,7 @@
 
         <ul class="uk-navbar-nav">
   					
-  			 <li class="logo"> <img src="../img/pokeball.png" class="uk-animation-shake"> </li>
+  			 <li class="logo"> <img src="app/view/img/pokeball.png" class="uk-animation-shake"> </li>
 
         </ul>
 
