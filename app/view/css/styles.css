@@ -1,10 +1,10 @@
 #logg{
 
 	background-image: url(../img/pokeball2.png);
-	height: 600px;
-	padding-top: 250px;
+	height: 500px;
 	background-size: 1000px;
 	max-width: 800px;
+	padding-top: 140px;
 }
 
 #register{
@@ -15,8 +15,40 @@
 }
 #register input{
 	margin-top: 10px;
-
 }
 #logg input{
 	margin-right: 10px;
+}
+.uk-modal-dialog{
+	background: none;
+}
+
+.uk-container-center-personalized{
+	padding: 50px;
+	border-color: black;
+}
+
+.rating{
+          overflow: hidden;
+          display: inline-block;
+}
+.rating-input{
+          position: absolute;
+          left: 0;
+          top: -50px;
+}
+.rating-star{        
+          display: block;
+          float: right;        
+          width: 16px;
+          height: 16px;
+
+          background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+}
+.rating-star:hover,
+.rating-star:hover ~ .rating-star {
+          background-position: 0 0;
+}
+.uk-width-2-6{
+	padding-right: 10px;	
 }

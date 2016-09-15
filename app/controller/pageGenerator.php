@@ -9,7 +9,7 @@ function replace_footer($in='/\#FOOTER\#/ms', $out,$page){
     return preg_replace($in, $out, $page);        
 }
 function load_template(){
-    $page = load_page('views/page.php');
+    $page = load_page('app/view/modules/page.php');
     return $page;
 }
 function load_page($page){
