@@ -1,29 +1,51 @@
-#logo {
+body {
 
-  width: 50px;
-  height: 50px;
+  background-color: #333;
+}
+
+
+/* LOGO */
+
+.uk-navbar-nav > li > img {
+
+  width: 70px;
+  height: 70px;
 
   margin-top: 10px;
 }
 
-.uk-navbar-flip > .uk-navbar-nav > li {
+.logo {
+
+  margin-left: 50px;
+}
+
+
+/* LOGUIN */
+
+.uk-navbar-nav > .uk-button-danger{
+
+  background-color: #FC222A;
+
+}
+
+.uk-navbar-nav > .uk-button-danger > a{
 
   color: white;
 
+   font-size: 20px;
+}
+
+.uk-navbar-nav > .uk-button-danger > a:hover{
+
+  color: #FC222A;
 }
 
 
-
-nav{
-
-  background-color: red;
-}
+/* NAVBAR2 */
 
 .uk-navbar-center > li{
 
-  background-color: white;
-
-  
+  background-color: white; 
 }
 
 .uk-navbar {
@@ -31,16 +53,34 @@ nav{
     color: #444;
 }
 
+.uk-navbar-center {
+    float: none;
 
+    text-align: center;
 
-.logo {
+    max-width: 50%;
 
-  margin-left: 50px;
+    margin-left: auto;
+
+    margin-right: auto;
 }
 
-body{
+.uk-tab > li {
 
-  background-color: #333;
+  background-color: white;
+
+  border-left: 2px solid #333;;
+
+  width: 25vw;
+
+  color: red;
+}
+
+.uk-tab > li > a{
+
+  font-size: 20px;
+
+  color: #2857BA;
 }
 
 
