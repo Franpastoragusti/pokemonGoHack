@@ -10,7 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/js/uikit.min.js"></script>
 </head>
 <body>
-<header>#HEADER#</header>
+<div>#CONTENT#</div>
 
 </body>
 </html>
