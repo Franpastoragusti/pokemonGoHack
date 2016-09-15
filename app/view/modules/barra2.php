@@ -44,20 +44,6 @@
   		</div>
 
 		</nav>
-
-    <!-- NARBAR 2 -->
-
-		<div class="uk-tab-center">
-    		
-    		<ul class="uk-tab uk-animation-fade uk-animation-5" data-uk-tab>
-
-    				<li> <a href="#Noticias" > NOTICIAS </a> </li>
-  					<li> <a href="#news"> TIPS </a> </li>
-  					<li> <a href="#contact"> FAIL </a> </li>
-
-    		</ul>
-
-    </div>
 		
 	</body>
 </html>
