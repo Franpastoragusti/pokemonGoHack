@@ -6,11 +6,9 @@ $mvc= new MainController();
 if (isset($_POST['user']) &&  isset($_POST['pass']) && isset($_POST['validatePass'])) {
 	$patronMayus='/([A-Z]+)/';
 	$pasPatronMayus=preg_match($patronMayus, $_POST['pass']);
-	$pasPatronSymbol=preg_match('/[[:punct:]]/', ' ', $_POST['pass']);
-	echo $pasPatronSymbol;
-	echo $pasPatronMayus;
+	#$pasPatronSymbol=preg_match('/[[:punct:]]/', ' ', $_POST['pass']);
 	echo strlen($_POST["pass"]);
-	if ($_POST["pass"]===$_POST["pass"] && strlen($_POST["pass"])>=8 && $pasPatronMayus == 1 && $pasPatronSymbol>1){
+	if ($_POST["pass"]===$_POST["pass"] && strlen($_POST["pass"])>=8 && $pasPatronMayus == 1){
 		echo "holaaaa";
 		$result = $mvc->signInUser($_POST['user'],$_POST["pass"]);
 	}else{
