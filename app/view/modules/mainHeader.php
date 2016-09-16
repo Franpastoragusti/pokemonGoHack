@@ -9,7 +9,7 @@
 
         <ul class="uk-navbar-nav">
   					
-  			 <li class="logo"> <img src="app/view/img/pokeball.png" class="uk-animation-shake"> </li>
+  			<a href="index.php"><li class="logo"> <img src="app/view/img/pokeball.png" class="uk-animation-shake"> </li></a>
 
         </ul>
 
@@ -34,11 +34,11 @@
 
 		<div class="uk-tab-center">
     		
-    		<ul class="uk-tab" data-uk-tab>
+    		<ul class="uk-tab">
 
-    		    <li class="news"> <a href="#Noticias" class="enlaceNews"> NEWS </a> </li>
-            <li class="tips"> <a href="#news" class="enlaceTips"> TIPS </a> </li>
-            <li class="fail"> <a href="#fail" class="enlaceFail"> FAIL </a> </li>
+    		    <li class="news btn"> <a class="enlaceNews" href="index.php?page=news" > NEWS </a> </li>
+            <li class="tips btn"> <a class="enlaceTips" href="index.php?page=tips"> TIPS </a> </li>
+            <li class="fail btn"> <a class="enlaceFail" href="index.php?page=fails"> FAILS </a> </li>
 
     		</ul>
 
@@ -54,12 +54,12 @@
             <form id="logg" class="uk-panel uk-form uk-border-rounded uk-cover-background" action='index.php' method='post'>
 
                 <div class="uk-form-row">
-                    <label for="user"></label>
-                        <input class="uk-width-1-3 uk-form-large" type="text" name='user' id='user' placeholder="Introduce tu usuario">
+                    <label for="userRegistered"></label>
+                        <input class="uk-width-1-3 uk-form-large" type="text" name='userRegistered' id='userRegistered' placeholder="Introduce tu usuario">
                 </div>
                 <div class="uk-form-row">
                     <label for="password"></label>
-                        <input class="uk-width-1-3 uk-form-large" type="text" name='contraseña' id='contraseña' placeholder="Introduce tu contraseña">
+                        <input class="uk-width-1-3 uk-form-large" type="password" name='password' id='password' placeholder="Introduce tu contraseña">
                 </div>
                 <div class="uk-form-row">
                     <input type='submit' value='Entra' class="uk-width-1-6 uk-button uk-button-danger uk-button-large"/>
@@ -82,15 +82,15 @@
               </div>
               <div class="uk-form-row">
                   <label for="pass"></label>
-                      <input class="uk-width-1-2 uk-form-large" type="text" name='pass' id='pass' placeholder="Introduce tu contraseña">
+                      <input class="uk-width-1-2 uk-form-large" type="password" name='pass' id='pass' placeholder="Introduce tu contraseña">
               </div>
               <div class="uk-form-row">
                   <label for="validatePass"></label>
-                      <input class="uk-width-1-2 uk-form-large" type="text" name='validatePass' id='validatePass' placeholder="Confirma tu contraseña">
+                      <input class="uk-width-1-2 uk-form-large" type="password" name='validatePass' id='validatePass' placeholder="Confirma tu contraseña">
               </div>
                  
               <div class="uk-form-row">
-                  <input type='submit' value='Entra' class="uk-width-1-6 uk-button uk-button-danger uk-button-large"/>
+                  <input type='submit' value='Regístrate' class="uk-width-1-6 uk-button uk-button-danger uk-button-large"/>
               </div>
               
           </form>

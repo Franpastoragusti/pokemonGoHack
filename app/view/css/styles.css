@@ -42,8 +42,8 @@
           float: right;        
           width: 16px;
           height: 16px;
-
           background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+
 }
 .rating-star:hover,
 .rating-star:hover ~ .rating-star {
@@ -56,34 +56,19 @@
 
 /* NAVBAR1 */
 
-.uk-navbar{
 
-  margin-bottom: 30px;
-}
 
 
 /* LOGO */
 
-.uk-navbar-nav > li > .uk-animation-shake {
+.uk-navbar-nav > a > li >.uk-animation-shake {
 
   width: 100px;
   height: 100px;
 
-  margin-top: 20px;
+  margin: 20px;
+  margin-bottom: 0px;
 }
-
-.logo {
-
-  margin-left: 50px;
-}
-
-.uk-navbar-nav > li > h1 {
-
-  color: yellow;
-
-  margin-top: 45px;
-}
-
 
 /* LOGUIN */
 
@@ -242,3 +227,30 @@ border: 5px solid #FBD131;
   float: left;
   padding-right: 30px;
   }
+
+
+a.noticiaLink:link{
+ text-decoration: none;
+
+}
+a.noticiaLink{
+	 color: #444;
+}
+
+.uk-container-center-personalized{
+	min-width: 800px;
+}
+
+.uk-button-danger{
+	border-radius: 15px 15px;
+	margin-top: 20px;
+}
+.uk-button-danger a:hover{
+	border-radius: 15px 15px;
+}
+.uk-button-danger a:focus{
+  border-radius: 15px 15px;
+}
+#header2{
+	height: 166px;
+}
