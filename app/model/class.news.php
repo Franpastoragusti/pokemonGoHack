@@ -1,12 +1,12 @@
 <?php
 //require_once"inter_news.php";
 require_once "class.bbdd.php";
-class news
+class News
 {
 	
 	public function getNewsByCategory($category){
+		$db=new Database;
 		$db->conectar();		
-	
 		$query = $db->consulta('SELECT n.* FROM noticias n, pertenecen p WHERE n.id_noticias=p.id_noticia AND n.id_noticias=$id');
  	    $db->disconnect();					
 		if($db->numero_de_filas($query) > 0) 
@@ -19,8 +19,6 @@ class news
 		{	
 			return '';
 		}			
-	}db
-
 	}
 
 
@@ -42,7 +40,7 @@ class news
 
 	}
 	public function getAllNews(){
-
+		$db=new Database;
 		$db->conectar();		
 		$query = $db->consulta("SELECT * FROM noticias");
  	    $db->disconnect();					
