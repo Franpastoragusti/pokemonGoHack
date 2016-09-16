@@ -42,8 +42,8 @@
           float: right;        
           width: 16px;
           height: 16px;
-
           background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+
 }
 .rating-star:hover,
 .rating-star:hover ~ .rating-star {
@@ -51,4 +51,206 @@
 }
 .uk-width-2-6{
 	padding-right: 10px;	
+}
+
+
+/* NAVBAR1 */
+
+
+
+
+/* LOGO */
+
+.uk-navbar-nav > a > li >.uk-animation-shake {
+
+  width: 100px;
+  height: 100px;
+
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+/* LOGUIN */
+
+.uk-navbar-nav > .uk-button-danger{
+
+  background-color: #FC222A;
+
+  margin-left: 10px;
+
+}
+
+.uk-navbar-nav > .uk-button-danger > a{
+
+  color: white;
+
+   font-size: 15px;
+}
+
+.uk-navbar-nav > .uk-button-danger > a:hover{
+
+  color: #FC222A;
+}
+
+
+/* NAVBAR2 */
+
+.uk-navbar-center > li{
+
+  background-color: white; 
+}
+
+.uk-navbar {
+    background: transparent;
+    color: #444;
+}
+
+.uk-navbar-center {
+    
+    float: none;
+
+    text-align: center;
+
+    max-width: 50%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+.uk-tab > li {
+
+  background-color: white;
+
+
+
+  width: 20vw;
+
+  color: red;
+}
+
+.uk-tab > li > .enlaceNews{
+
+  color: #F21B1E;
+}
+
+.uk-tab > li > .enlaceTips{
+
+  color: #187BED;
+}
+
+.uk-tab > li > .enlaceFail{
+
+  color: #FBD131;
+}
+
+.uk-tab > li > a{
+
+  font-size: 20px;
+   font-family: 'Roboto Slab', serif;
+
+}
+
+.uk-tab > li > a:hover{
+  
+  font-size: 20px;
+
+  background-color: transparent;
+
+  border-color: transparent;
+
+  color: black;
+}
+
+.uk-tab > li.uk-active > a {
+    
+    border-color: transparent;
+    border-bottom-color: transparent;
+    background: transparent;
+    color: black;
+}
+
+.news{
+
+ 
+border-radius: 28px 0px 0px 0px;
+-moz-border-radius: 28px 0px 0px 0px;
+-webkit-border-radius: 28px 0px 0px 0px;
+border: 5px solid #F21B1E;
+}
+
+.tips{
+
+  border-radius: 0px 0px 0px 0px;
+-moz-border-radius: 0px 0px 0px 0px;
+-webkit-border-radius: 0px 0px 0px 0px;
+border: 5px solid #187BED;
+}
+
+.fail{
+  border-radius: 0px 28px 0px 0px;
+-moz-border-radius: 0px 28px 0px 0px;
+-webkit-border-radius: 0px 28px 0px 0px;
+border: 5px solid #FBD131;
+}
+
+
+#header{
+
+  background-color: #333;
+}
+#copyright{
+	 background-color: #333;
+	 color: #FFF;
+	 height: 50px;
+}
+#copyright{
+	padding-top: 15px;
+	padding-left: 10px;
+}
+
+
+/* NOTICIA GRANDE */
+
+ .uk-width-2-6{
+  padding-right: 10px;  
+}
+
+.uk-flex .uk-flex-row{
+  
+  margin-top: 75px;
+}
+
+.stars{
+
+  margin-top: 10px;
+  float: left;
+  padding-right: 30px;
+  }
+
+
+a.noticiaLink:link{
+ text-decoration: none;
+
+}
+a.noticiaLink{
+	 color: #444;
+}
+
+.uk-container-center-personalized{
+	min-width: 800px;
+}
+
+.uk-button-danger{
+	border-radius: 15px 15px;
+	margin-top: 20px;
+}
+.uk-button-danger a:hover{
+	border-radius: 15px 15px;
+}
+.uk-button-danger a:focus{
+  border-radius: 15px 15px;
+}
+#header2{
+	height: 166px;
 }
