@@ -1,4 +1,3 @@
-
 <div class="uk-container-center-personalized uk-flex-row">
  	<div class="uk-flex uk-flex-row">
 		<div class="uk-width-2-4 uk-flex uk-flex-row">

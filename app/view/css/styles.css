@@ -254,3 +254,14 @@ a.noticiaLink{
 #header2{
 	height: 166px;
 }
+
+.slider {
+
+  margin-top:20px;
+
+  height: 500px;
+  width: 800px;
+
+  margin-left: auto;
+  margin-right: auto;
+}

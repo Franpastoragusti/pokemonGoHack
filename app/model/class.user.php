@@ -9,7 +9,7 @@ class User
 		$db=new Database;
 		$db->conectar();	
 		$encryptKey=md5($pass);
-		$sentencia = "INSERT INTO usuarios(user, pass) VALUES ('$nameUser', '$encryptKey')";	
+		$sentencia = "INSERT INTO usuarios(nombre, password) VALUES ('$nameUser', '$encryptKey')";	
 		$query = $db->consulta($sentencia);
 		if($query==true){
 			$db->disconnect();	
@@ -25,10 +25,10 @@ class User
 		$db=new Database;
 		$db->conectar();	
 		$encryptKey=md5($pass);
-		$sentencia = "SELECT u.id_user FROM usuarios u WHERE u.user='$nameUser' AND u.pass='$encryptKey'";	
+		$sentencia = "SELECT u.id FROM usuarios u WHERE u.nombre='$nameUser' AND u.password='$encryptKey'";	
 		$query = $db->consulta($sentencia);
 
-		if($db->numero_de_filas($query) > 0) // existe -> datos correctos
+		if($db->numero_de_filas($query) > 0)
 		{		
 				while ( $tsArray = $db->fetch_assoc($query) ) 
 					$data[] = $tsArray;			
