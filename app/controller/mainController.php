@@ -10,26 +10,39 @@ class MainController{
 	public function viewLittleNews(){
 		$news=new News();
 		$data = $news->getAllNews();
-		$rows = sizeof($data)/2;
-
-		echo $data[0]["titulo"];
-
-		$rows = sizeof($data)/2;
-		$panels = "";
+		$panels1='';
+		$panels2='';
+		$panelsRow='';
 		$pagina=load_template();
 		$header = load_page("app/view/modules/mainHeader.php");
-		
-
-		for ($i=0; $i < $rows; $i++) { 
-			$rep=replace_data('/\#DATA\#/ms' ,$data , $)
-
-			$panelsHTML = load_page("app/view/modules/pastillas.php");
-
-
-			$panels=$panels.$panelsHTML;
-		}
 		$content = load_page("app/view/modules/noticiasMenu.php");
-		$content = replace_content('/\#CONTENT\#/ms' ,$panels , $content);
+
+		for ($i=0; $i < sizeof($data); $i++) { 
+			
+			$panelsHTML = load_page("app/view/modules/pastillas.php");
+			$panelsHTML = replace_photo('/\#FOTO\#/ms' ,$data[$i]["foto"] , $panelsHTML);
+			$panelsHTML = replace_title('/\#TITULO\#/ms' ,$data[$i]["titulo"] , $panelsHTML);
+			$panelsHTML = replace_subtitle('/\#SUBTITULO\#/ms' ,$data[$i]["subtitulo"] , $panelsHTML);
+			$panelsHTML = replace_newsContent('/\#CONTENIDO\#/ms' ,$data[$i]["contenido"] , $panelsHTML);
+			$panelsHTML = replace_date('/\#FECHA\#/ms' ,$data[$i]["fecha"] , $panelsHTML);
+			$panelsHTML = replace_uri('/\#NEWSID\#/ms' ,$data[$i]["id_noticias"] , $panelsHTML);
+			//$single_news = replace_category('/\#CATEGORIA\#/ms' ,$data[$i]["categoria"] , $panelsHTML);
+			if ($i % 2 == 0) {
+				$panels1='<div class="uk-flex uk-flex-row">'.$panelsHTML;
+			}else{
+				$panels2=$panelsHTML.'</div>';
+			}
+			if ($panels2 != '' && $panels1 != '') {
+				$panelsRow=$panelsRow.$panels1.$panels2;
+				$panels1='';
+				$panels2='';
+			}
+			if ($panels1 != '' && $panels2 == '' && $i==sizeof($data)-1) {
+				$panelsRow=$panelsRow.$panels1.'</div>';
+			}
+		}
+		
+		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
 		view_page($page);
