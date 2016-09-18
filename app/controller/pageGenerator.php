@@ -44,5 +44,8 @@ function replace_newsContent($in='/\#CONTENIDO\#/ms', $out,$page){
 function replace_uri($in='/\#NEWSID\#/ms', $out,$page){
     return preg_replace($in, $out, $page);        
 }
+function replace_slider($in='/\#SLIDER\#/ms', $out,$page){
+    return preg_replace($in, $out, $page);        
+}
 
 ?>

@@ -16,11 +16,12 @@ class MainController{
 		$pagina=load_template();
 		$header = load_page("app/view/modules/mainHeader.php");
 		$content = load_page("app/view/modules/noticiasMenu.php");
+		$slider="<li> <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[0]['foto']." alt=''> </li><li><img class='uk-thumbnail uk-thumbnail-medium' src=".$data[1]['foto']." alt=''> </li><li> <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[2]['foto']." alt=''> </li><li><img class='uk-thumbnail uk-thumbnail-medium' src=".$data[3]['foto']." alt=''> </li><li>  <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[4]['foto']." alt=''> </li>";
 
 		$panelsRow=$this->buildRowOfNews($data, $panels1, $panels2, $panelsRow, $news);
-		
-		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
+		$content = replace_slider('/\#SLIDER\#/ms', $slider, $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
+		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
 		return $page;
 	}
@@ -46,13 +47,23 @@ class MainController{
 		$panels1='';
 		$panels2='';
 		$panelsRow='';
-		
+		$slider='';
+		$dataActualNews = $news->getAllNews();
 		$pagina=load_template();
+		
+
+		for ($i=0; $i < 4; $i++) { 
+			$slider=$slider."<li><img class='uk-thumbnail uk-thumbnail-medium' src=".$dataActualNews[$i]['foto']." alt=''></li>";
+		}
+
+
+
+
 		$header = load_page("app/view/modules/mainHeader.php");
 		$content = load_page("app/view/modules/noticiasMenu.php");
-
 		$panelsRow=$this->buildRowOfNews($data, $panels1, $panels2, $panelsRow, $news);
-		
+
+		$content = replace_slider('/\#SLIDER\#/ms', $slider, $content);
 		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
@@ -75,10 +86,6 @@ class MainController{
 				$categoryFinal=$categoryFinal."/".$categorias[$u][0];
 			}
 		}
-
-
-
-
 		$content = replace_photo('/\#FOTO\#/ms' ,$data[0]["foto"] , $content);
 		$content = replace_title('/\#TITULO\#/ms' ,$data[0]["titulo"] , $content);
 		$content = replace_subtitle('/\#SUBTITULO\#/ms' ,$data[0]["subtitulo"] , $content);

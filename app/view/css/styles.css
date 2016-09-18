@@ -24,8 +24,11 @@
 }
 
 .uk-container-center-personalized{
-	padding: 50px;
 	border-color: black;
+}
+.uk-flex .uk-flex-row{
+  margin-left: 100px;
+
 }
 
 .rating{
@@ -238,7 +241,7 @@ a.noticiaLink{
 }
 
 .uk-container-center-personalized{
-	min-width: 800px;
+	
 }
 
 .uk-button-danger{
@@ -256,12 +259,13 @@ a.noticiaLink{
 }
 
 .slider {
+  
+  width: auto;
+  max-height: 300px;
 
-  margin-top:20px;
+  margin-top: -50px;
+}
+div.uk-cover-background{
+  max-height: 300px;
 
-  height: 500px;
-  width: 800px;
-
-  margin-left: auto;
-  margin-right: auto;
 }
