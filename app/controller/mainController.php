@@ -93,7 +93,6 @@ class MainController{
 		$content = replace_date('/\#FECHA\#/ms' ,$data[0]["fecha"] , $content);
 		$content = replace_uri('/\#NEWSID\#/ms' ,$data[0]["id_noticias"] , $content);
 		$content = replace_category('/\#CATEGORIAS\#/ms' ,$categoryFinal , $content);
-		echo $categorias[0][0];
 		switch ($categorias[0][0]) {
 			case "Novedades":
 				$idCategory=1;
