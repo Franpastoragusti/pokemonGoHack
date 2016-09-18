@@ -25,7 +25,7 @@ class Database {
 
 	function numero_de_filas($result){
 		
-		return mysqli_num_rows($result);
+			return mysqli_num_rows($result);
 	}
 	
 

@@ -19,19 +19,13 @@ if (isset($_POST['user']) &&  isset($_POST['pass']) && isset($_POST['validatePas
 	//Logea a un usuario registrado
 	$mvc->loginUser($_POST['userRegistered'],$_POST['password']);
 
-}elseif ($_GET['page'] == "news") {
-	//Mostrar a categoria de novedades
-	$mvc->viewLittleNews();
-}elseif ($_GET['page'] == "tips") {
+}elseif (isset($_GET['page'])) {
 	//Mostrar categoria de consejos
-	$mvc->viewLittleNews();
+	$mvc->viewLittleNewsByCategory($_GET['page']);
 
-}elseif ($_GET['page'] == "fails") {
-	//Mostrar categoria de caídas
-	$mvc->viewLittleNews();
-}elseif ($_GET['news'] == "id") {
+}elseif (isset($_GET['news'])) {
 	//Mostrar una noticia seleccionada por el usuario
-	$mvc->viewBigNews();
+	//$mvc->viewBigNews($_GET['news']);
 
 }else{
 	$mvc->viewLittleNews();

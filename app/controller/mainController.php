@@ -2,23 +2,186 @@
 
 require_once"pageGenerator.php";
 include"app/model/class.user.php";
+include"app/model/class.news.php";
 
 class MainController{
 
 
 	public function viewLittleNews(){
+		$news=new News();
+		$data = $news->getAllNews();
+		$panels1='';
+		$panels2='';
+		$panelsRow='';
+		
 		$pagina=load_template();
 		$header = load_page("app/view/modules/mainHeader.php");
 		$content = load_page("app/view/modules/noticiasMenu.php");
+
+		for ($i=0; $i < sizeof($data); $i++) { 
+			
+			$categorias=$news->getTheCategoriesOfANews($data[$i]["id_noticias"]);
+			$categoryFinal=$categorias[0][0];
+			if (sizeof($categorias) > 1) {
+				for ($u=1; $u < sizeof($categorias); $u++) { 
+					$categoryFinal=$categoryFinal."/".$categorias[$u][0];
+				}
+			}
+			$panelsHTML = load_page("app/view/modules/pastillas.php");
+			$panelsHTML = replace_photo('/\#FOTO\#/ms' ,$data[$i]["foto"] , $panelsHTML);
+			$panelsHTML = replace_title('/\#TITULO\#/ms' ,$data[$i]["titulo"] , $panelsHTML);
+			$panelsHTML = replace_subtitle('/\#SUBTITULO\#/ms' ,$data[$i]["subtitulo"] , $panelsHTML);
+			$panelsHTML = replace_newsContent('/\#CONTENIDO\#/ms' ,substr($data[$i]["contenido"], 0, 200)."..." , $panelsHTML);
+			$panelsHTML = replace_date('/\#FECHA\#/ms' ,$data[$i]["fecha"] , $panelsHTML);
+			$panelsHTML = replace_uri('/\#NEWSID\#/ms' ,$data[$i]["id_noticias"] , $panelsHTML);
+			$panelsHTML = replace_category('/\#CATEGORIAS\#/ms' ,$categoryFinal , $panelsHTML);
+			if ($i % 2 == 0) {
+				$panels1='<div class="uk-flex uk-flex-row">'.$panelsHTML;
+			}else{
+				$panels2=$panelsHTML.'</div>';
+			}
+			if ($panels2 != '' && $panels1 != '') {
+				$panelsRow=$panelsRow.$panels1.$panels2;
+				$panels1='';
+				$panels2='';
+			}
+			if ($panels1 != '' && $panels2 == '' && $i==sizeof($data)-1) {
+				$panelsRow=$panelsRow.$panels1.'</div>';
+			}
+		}
+		
+		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
 		view_page($page);
 	}
 
-	public function viewBigNews(){
+
+
+	public function viewLittleNewsByCategory($category){
+		switch ($category) {
+			case "news":
+				$idCategory=1;
+				break;
+			case "fails":
+				$idCategory=2;
+				break;
+			case "tips":
+				$idCategory=3;
+				break;
+			default:
+				break;
+		}
+		$news=new News();
+		$data = $news->getNewsByCategory($idCategory);
+		$panels1='';
+		$panels2='';
+		$panelsRow='';
+		
+		$pagina=load_template();
+		$header = load_page("app/view/modules/mainHeader.php");
+		$content = load_page("app/view/modules/noticiasMenu.php");
+
+		for ($i=0; $i < sizeof($data); $i++) { 
+			
+			$categorias=$news->getTheCategoriesOfANews($data[$i]["id_noticias"]);
+			$categoryFinal=$categorias[0][0];
+			if (sizeof($categorias) > 1) {
+				for ($u=1; $u < sizeof($categorias); $u++) { 
+					$categoryFinal=$categoryFinal."/".$categorias[$u][0];
+				}
+			}
+			$panelsHTML = load_page("app/view/modules/pastillas.php");
+			$panelsHTML = replace_photo('/\#FOTO\#/ms' ,$data[$i]["foto"] , $panelsHTML);
+			$panelsHTML = replace_title('/\#TITULO\#/ms' ,$data[$i]["titulo"] , $panelsHTML);
+			$panelsHTML = replace_subtitle('/\#SUBTITULO\#/ms' ,$data[$i]["subtitulo"] , $panelsHTML);
+			$panelsHTML = replace_newsContent('/\#CONTENIDO\#/ms' ,substr($data[$i]["contenido"], 0, 200)."..." , $panelsHTML);
+			$panelsHTML = replace_date('/\#FECHA\#/ms' ,$data[$i]["fecha"] , $panelsHTML);
+			$panelsHTML = replace_uri('/\#NEWSID\#/ms' ,$data[$i]["id_noticias"] , $panelsHTML);
+			$panelsHTML = replace_category('/\#CATEGORIAS\#/ms' ,$categoryFinal , $panelsHTML);
+			if ($i % 2 == 0) {
+				$panels1='<div class="uk-flex uk-flex-row">'.$panelsHTML;
+			}else{
+				$panels2=$panelsHTML.'</div>';
+			}
+			if ($panels2 != '' && $panels1 != '') {
+				$panelsRow=$panelsRow.$panels1.$panels2;
+				$panels1='';
+				$panels2='';
+			}
+			if ($panels1 != '' && $panels2 == '' && $i==sizeof($data)-1) {
+				$panelsRow=$panelsRow.$panels1.'</div>';
+			}
+		}
+		
+		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
+		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
+		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
+		view_page($page);
+
+
+
+	}
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public function viewBigNews($idNews){
 		$pagina=load_template();
 		$header = load_page("app/view/modules/header2.php");
 		$content = load_page("app/view/modules/noticia.php");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
 		view_page($page);
