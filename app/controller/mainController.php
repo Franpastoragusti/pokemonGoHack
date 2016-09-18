@@ -6,7 +6,6 @@ include"app/model/class.news.php";
 
 class MainController{
 
-
 	public function viewLittleNews(){
 		$news=new News();
 		$data = $news->getAllNews();
@@ -53,7 +52,7 @@ class MainController{
 		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
-		view_page($page);
+		return $page;
 	}
 
 
@@ -117,71 +116,14 @@ class MainController{
 		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
-		view_page($page);
-
-
+		return $page;
 
 	}
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	public function viewBigNews($idNews){
 		$pagina=load_template();
 		$header = load_page("app/view/modules/header2.php");
 		$content = load_page("app/view/modules/noticia.php");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
 		view_page($page);
@@ -191,31 +133,13 @@ class MainController{
 	function signInUser($nameUser, $pass){
 		$user = new User();	
 		$result = $user->signIn($nameUser, $pass);
-		if ($result) {
-			$pagina=load_template();
-			$header = load_page("app/view/modules/mainHeader.php");
-			$header = preg_replace('/LOGIN/', strtoupper($nameUser), $header);
-			$header = preg_replace('/\#modalLogin/', "", $header);
-			$content = load_page("app/view/modules/noticiasMenu.php");
-			$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
-			$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
-			view_page($page);
-		}
+		return $result;
 	}
 	function loginUser($nameUser, $pass){
 		$user = new User();	
 		$result = $user->login($nameUser, $pass);
-		$id=$result[0]['id_user'];
-		if($result!=''){
-			$pagina=load_template();
-			$header = load_page("app/view/modules/mainHeader.php");
-			$header = preg_replace('/LOGIN/', strtoupper($nameUser), $header);
-			$header = preg_replace('/\#modalLogin/', "", $header);
-			$content = load_page("app/view/modules/noticiasMenu.php");
-			$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
-			$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
-			view_page($page);
-		}
+		return $result;
+		
 	}
 }
 

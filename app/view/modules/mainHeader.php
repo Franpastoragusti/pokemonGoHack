@@ -8,42 +8,42 @@
       <div  class="uk-navbar-nav">
 
         <ul class="uk-navbar-nav">
-  					
-  			<a href="index.php"><li class="logo"> <img src="app/view/img/pokeball.png" class="uk-animation-shake"> </li></a>
+            
+        <a href="index.php"><li class="logo"> <img src="app/view/img/pokeball.png" class="uk-animation-shake"> </li></a>
 
         </ul>
 
       </div>
-    	
+      
       <!-- LOGUIN -->
 
       <div  class="uk-navbar-flip">
 
         <ul class="uk-navbar-nav ">
+          <li class="uk-button-danger"> <a href="index.php?logout"><i class="uk-icon-circle-o-notch"></i></a></li> 
+          <li class="uk-button-danger"> <a href="#modalRegister" data-uk-modal><i class="uk-icon-sign-in"> SING IN</i></a></li> 
+          <li class="uk-button-danger"> <a href="#modalLogin" data-uk-modal><i class="uk-icon-user"> LOGIN </i></a></li>
 
-  				<li class="uk-button-danger"> <a href="#modalRegister" data-uk-modal><i class="uk-icon-sign-in"> SING IN</i></a></li>	
-  				<li class="uk-button-danger"> <a href="#modalLogin" data-uk-modal><i class="uk-icon-user"> LOGIN </i></a></li>
+        </ul>
 
-  			</ul>
+      </div>
 
-  		</div>
-
-		</nav>
+    </nav>
 
     <!-- NARBAR 2 -->
 
-		<div class="uk-tab-center">
-    		
-    		<ul class="uk-tab">
+    <div class="uk-tab-center">
+        
+        <ul class="uk-tab">
 
-    		    <li class="news btn"> <a class="enlaceNews" href="index.php?page=news" > NEWS </a> </li>
+            <li class="news btn"> <a class="enlaceNews" href="index.php?page=news" > NEWS </a> </li>
             <li class="tips btn"> <a class="enlaceTips" href="index.php?page=tips"> TIPS </a> </li>
             <li class="fail btn"> <a class="enlaceFail" href="index.php?page=fails"> FAILS </a> </li>
 
-    		</ul>
+        </ul>
 
     </div>
-		
+    
 
 
 <div id="modalLogin" class="uk-modal">
