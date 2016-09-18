@@ -26,7 +26,7 @@ function view_page($html){
 function replace_title($in='/\#TITULO\#/ms', $out,$page){
     return preg_replace($in, $out, $page);        
 }
-function replace_category($in='/\#CATEGORIA\#/ms', $out,$page){
+function replace_category($in='/\#CATEGORIAS\#/ms', $out,$page){
     return preg_replace($in, $out, $page);        
 }
 function replace_subtitle($in='/\#SUBTITULO\#/ms', $out,$page){

@@ -24,7 +24,7 @@
 							<h2>#TITULO#</h2>
 							<h4>#SUBTITULO#</h4>
 							<h5>#FECHA#</h5>
-							<h6>#CATEGORIA#</h6>
+							<h6>#CATEGORIAS#</h6>
 							<p class="uk-text-justify">#CONTENIDO#</p>
 						</a>
 					</div>
