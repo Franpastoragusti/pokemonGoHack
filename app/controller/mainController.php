@@ -12,11 +12,13 @@ class MainController{
 		$panels1='';
 		$panels2='';
 		$panelsRow='';
-		
+		$slider='';
 		$pagina=load_template();
 		$header = load_page("app/view/modules/mainHeader.php");
 		$content = load_page("app/view/modules/noticiasMenu.php");
-		$slider="<li> <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[0]['foto']." alt=''> </li><li><img class='uk-thumbnail uk-thumbnail-medium' src=".$data[1]['foto']." alt=''> </li><li> <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[2]['foto']." alt=''> </li><li><img class='uk-thumbnail uk-thumbnail-medium' src=".$data[3]['foto']." alt=''> </li><li>  <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[4]['foto']." alt=''> </li>";
+		for ($i=0; $i < 4; $i++) { 
+			$slider=$slider."<li><img class='uk-thumbnail uk-thumbnail-medium' src=".$data[$i]['foto']." alt=''><a href=index.php?news=".$data[$i]["id_noticias"]."><h4>".$data[$i]['titulo']."</h4></a></li>";
+		}
 		
 		$panelsRow=$this->buildRowOfNews($data, $panels1, $panels2, $panelsRow, $news);
 		$content = replace_slider('/\#SLIDER\#/ms', $slider, $content);

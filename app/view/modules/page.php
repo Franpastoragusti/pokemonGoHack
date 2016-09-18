@@ -15,6 +15,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/js/uikit.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/js/components/slideshow.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/css/components/slideshow.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
 </head>
 <body>
 <div id="header">#HEADER#</div>
