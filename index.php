@@ -33,9 +33,9 @@ if (isset($_POST['user']) &&  isset($_POST['pass']) && isset($_POST['validatePas
 			echo $page;
 		}
 
-}elseif (isset($_GET['page'])) {
+}elseif (isset($_GET['secction'])) {
 	//Mostrar categoria de consejos
-	$page=$mvc->viewLittleNewsByCategory($_GET['page']);
+	$page=$mvc->viewLittleNewsByCategory($_GET['secction']);
 
 	if ($_SESSION["user"]) {
 			$page = preg_replace('/LOGIN/', strtoupper($_SESSION["user"]), $page);

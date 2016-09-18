@@ -36,9 +36,9 @@
         
         <ul class="uk-tab">
 
-            <li class="news btn"> <a class="enlaceNews" href="index.php?page=news" > NEWS </a> </li>
-            <li class="tips btn"> <a class="enlaceTips" href="index.php?page=tips"> TIPS </a> </li>
-            <li class="fail btn"> <a class="enlaceFail" href="index.php?page=fails"> FAILS </a> </li>
+            <li class="news btn"> <a class="enlaceNews" href="index.php?secction=news" > NEWS </a> </li>
+            <li class="tips btn"> <a class="enlaceTips" href="index.php?secction=tips"> TIPS </a> </li>
+            <li class="fail btn"> <a class="enlaceFail" href="index.php?secction=fails"> FAILS </a> </li>
 
         </ul>
 

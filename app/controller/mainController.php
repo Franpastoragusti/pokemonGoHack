@@ -17,7 +17,7 @@ class MainController{
 		$header = load_page("app/view/modules/mainHeader.php");
 		$content = load_page("app/view/modules/noticiasMenu.php");
 		$slider="<li> <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[0]['foto']." alt=''> </li><li><img class='uk-thumbnail uk-thumbnail-medium' src=".$data[1]['foto']." alt=''> </li><li> <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[2]['foto']." alt=''> </li><li><img class='uk-thumbnail uk-thumbnail-medium' src=".$data[3]['foto']." alt=''> </li><li>  <img class='uk-thumbnail uk-thumbnail-medium' src=".$data[4]['foto']." alt=''> </li>";
-
+		
 		$panelsRow=$this->buildRowOfNews($data, $panels1, $panels2, $panelsRow, $news);
 		$content = replace_slider('/\#SLIDER\#/ms', $slider, $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
@@ -133,7 +133,6 @@ class MainController{
 	}
 	function buildRowOfNews($data, $panels1, $panels2, $panelsRow, $news){
 		for ($i=0; $i < sizeof($data); $i++) { 
-			
 			$categorias=$news->getTheCategoriesOfANews($data[$i]["id_noticias"]);
 			$categoryFinal=$categorias[0][0];
 			if (sizeof($categorias) > 1) {
@@ -165,6 +164,7 @@ class MainController{
 		}
 		return $panelsRow;
 	}
+
 }
 
 ?>
