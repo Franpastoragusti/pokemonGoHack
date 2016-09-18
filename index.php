@@ -10,9 +10,7 @@ if (isset($_POST['user']) &&  isset($_POST['pass']) && isset($_POST['validatePas
 	$patronMayus='/([A-Z]+)/';
 	$pasPatronMayus=preg_match($patronMayus, $_POST['pass']);
 	#$pasPatronSymbol=preg_match('/[[:punct:]]/', ' ', $_POST['pass']);
-	echo strlen($_POST["pass"]);
 	if ($_POST["pass"]===$_POST["pass"] && strlen($_POST["pass"])>=8 && $pasPatronMayus == 1){
-		echo "holaaaa";
 		$result = $mvc->signInUser($_POST['user'],$_POST["pass"]);
 		$page=$mvc->viewLittleNews();
 		if ($result) {
@@ -48,7 +46,7 @@ if (isset($_POST['user']) &&  isset($_POST['pass']) && isset($_POST['validatePas
 	}
 }elseif (isset($_GET['news'])) {
 	//Mostrar una noticia seleccionada por el usuario
-	//$mvc->viewBigNews($_GET['news']);
+	$mvc->viewBigNews($_GET['news']);
 
 
 
@@ -69,8 +67,6 @@ if (isset($_POST['user']) &&  isset($_POST['pass']) && isset($_POST['validatePas
 		echo $page;
 	}
 }
-
-echo $_SESSION["user"];
 
 
 ?>
