@@ -7,7 +7,7 @@ class News
 	public function getNewsByCategory($category){
 		$db=new Database;
 		$db->conectar();		
-		$query = $db->consulta("SELECT n.* FROM noticias n, pertenecen p WHERE n.id_noticias=p.id_noticia AND p.id_categoria='$category'");
+		$query = $db->consulta("SELECT n.* FROM noticias n, pertenecen p WHERE n.id_noticias=p.id_noticia AND p.id_categoria='$category' ORDER BY n.fecha DESC");
  	    $db->disconnect();					
 		if($db->numero_de_filas($query) > 0) 
 		{		
@@ -42,7 +42,7 @@ class News
 	public function getAllNews(){
 		$db=new Database;
 		$db->conectar();		
-		$query = $db->consulta("SELECT * FROM noticias");
+		$query = $db->consulta("SELECT * FROM noticias n ORDER BY n.fecha DESC");
  	    $db->disconnect();					
 		if($db->numero_de_filas($query) > 0) 
 		{		
@@ -71,5 +71,24 @@ class News
 			return '';
 		}		
 	}
+
+
+		public function getTwoNewsByCategory($category){
+		$db=new Database;
+		$db->conectar();		
+		$query = $db->consulta("SELECT n.* FROM noticias n, pertenecen p WHERE n.id_noticias=p.id_noticia AND p.id_categoria='$category' ORDER BY n.fecha DESC LIMIT 2");
+ 	    $db->disconnect();					
+		if($db->numero_de_filas($query) > 0) 
+		{		
+				while ( $tsArray = $db->fetch_assoc($query) ) 
+					$data[] = $tsArray;			
+		
+				return $data;
+		}else
+		{	
+			return '';
+		}			
+	}
+
 }
 ?>
