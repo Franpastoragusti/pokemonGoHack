@@ -267,5 +267,24 @@ a.noticiaLink{
 }
 div.uk-cover-background{
   max-height: 300px;
+  margin: 0 auto;
+  z-index: -1;
 
 }
+.uk-slideshow > li > a > h4{
+  padding-left: 30px;
+  margin-left: 30px;
+ color: #333;
+ background-color: #cccc00;
+  margin-top: -550px;
+  z-index: 1;
+  border-radius: 15px 15px;
+  line-height: 30px;
+  width: 600px;
+  box-shadow: -1px 3px 33px 20px #000;
+ font-family: 'Freckle Face', cursive;
+ text-shadow: 4px 4px 4px #aaa;
+ font-size: 20px;
+
+}
+
