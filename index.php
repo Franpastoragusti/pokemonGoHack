@@ -1,6 +1,6 @@
 <?php
 require_once"app/controller/mainController.php";
-//error_reporting(0);
+error_reporting(0);
 $mvc= new MainController();
 	
 	session_start();
@@ -47,9 +47,6 @@ if (isset($_POST['user']) &&  isset($_POST['pass']) && isset($_POST['validatePas
 }elseif (isset($_GET['news'])) {
 	//Mostrar una noticia seleccionada por el usuario
 	$mvc->viewBigNews($_GET['news']);
-
-
-
 
 }elseif (isset($_GET['logout'])) {
 	session_destroy();

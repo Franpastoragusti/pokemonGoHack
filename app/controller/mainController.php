@@ -19,7 +19,7 @@ class MainController{
 		for ($i=0; $i < 4; $i++) { 
 			$slider=$slider."<li><img class='uk-thumbnail uk-thumbnail-medium' src=".$data[$i]['foto']." alt=''><a href=index.php?news=".$data[$i]["id_noticias"]."><h4>".$data[$i]['titulo']."</h4></a></li>";
 		}
-		
+		$pageNums=sizeof($data)/2;
 		$panelsRow=$this->buildRowOfNews($data, $panels1, $panels2, $panelsRow, $news);
 		$content = replace_slider('/\#SLIDER\#/ms', $slider, $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
@@ -55,7 +55,7 @@ class MainController{
 		
 
 		for ($i=0; $i < 4; $i++) { 
-			$slider=$slider."<li><img class='uk-thumbnail uk-thumbnail-medium' src=".$dataActualNews[$i]['foto']." alt=''></li>";
+			$slider=$slider."<li><img class='uk-thumbnail uk-thumbnail-medium' src=".$dataActualNews[$i]['foto']." alt=''><a href=index.php?news=".$dataActualNews[$i]["id_noticias"]."><h4>".$dataActualNews[$i]['titulo']."</h4></a></li>";
 		}
 
 
@@ -166,7 +166,6 @@ class MainController{
 		}
 		return $panelsRow;
 	}
-
 }
 
 ?>

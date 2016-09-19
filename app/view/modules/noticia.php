@@ -27,9 +27,9 @@
       
       <div class="uk-width-2-4 uk-text-left">
         <h2>#TITULO#</h2>
-        <h4>#SUBTITULO#</h4>
-        <h5>#FECHA#</h5>
-        <h6>#CATEGORIAS#</h6>
+        <h4>Subtitle: #SUBTITULO#</h4>
+        <h5>Date: #FECHA#</h5>
+        <h6>Categories: #CATEGORIAS#</h6>
         <p class="uk-text-justify">#CONTENIDO#</p>
       </div>
     </div>
