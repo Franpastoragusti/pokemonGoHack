@@ -2,7 +2,7 @@
 require_once"inter_user.php";
 require_once "class.bbdd.php";
 
-class User
+class User implements  Inter_user
 {
 	
 	function signIn($nameUser, $pass){

@@ -96,7 +96,7 @@ class MainController{
 		$content = replace_uri('/\#NEWSID\#/ms' ,$data[0]["id_noticias"] , $content);
 		$content = replace_category('/\#CATEGORIAS\#/ms' ,$categoryFinal , $content);
 		switch ($categorias[0][0]) {
-			case "Novedades":
+			case "News":
 				$idCategory=1;
 				break;
 			case "Fails":
@@ -106,9 +106,8 @@ class MainController{
 				$idCategory=3;
 				break;
 		}
-
-		$dataLimited=$news->getTwoNewsByCategory($idCategory);
-		
+		$dataLimited='';
+		$dataLimited=$news->getTwoNewsByCategory($idCategory, $data[0]['id_noticias']);
 		$panels1='';
 		$panels2='';
 		$panelsRow='';
@@ -118,22 +117,22 @@ class MainController{
 		$content = replace_content('/\#CONTENT\#/ms' ,$panelsRow , $content);
 		$page = replace_header('/\#HEADER\#/ms', $header, $pagina);
 		$page = replace_content('/\#CONTENT\#/ms' ,$content , $page);
-		view_page($page);
+		return $page;
 	}
 
 
-	function signInUser($nameUser, $pass){
+	public function signInUser($nameUser, $pass){
 		$user = new User();	
 		$result = $user->signIn($nameUser, $pass);
 		return $result;
 	}
-	function loginUser($nameUser, $pass){
+	public function loginUser($nameUser, $pass){
 		$user = new User();	
 		$result = $user->login($nameUser, $pass);
 		return $result;
 		
 	}
-	function buildRowOfNews($data, $panels1, $panels2, $panelsRow, $news){
+	public function buildRowOfNews($data, $panels1, $panels2, $panelsRow, $news){
 		for ($i=0; $i < sizeof($data); $i++) { 
 			$categorias=$news->getTheCategoriesOfANews($data[$i]["id_noticias"]);
 			$categoryFinal=$categorias[0][0];
@@ -165,6 +164,12 @@ class MainController{
 			}
 		}
 		return $panelsRow;
+	}
+
+	public function imARegisteredUser($user, $page){
+		$page = preg_replace('/LOGIN/', strtoupper($user), $page);
+		$page = preg_replace('/\#modalLogin/', "", $page);
+		echo $page;
 	}
 }
 

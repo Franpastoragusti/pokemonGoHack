@@ -287,4 +287,7 @@ div.uk-cover-background{
  font-size: 20px;
 
 }
+.uk-panel .uk-panel-box-warning{
+  background-color: #FF9999;
+}
 

@@ -20,8 +20,8 @@
       <div  class="uk-navbar-flip">
 
         <ul class="uk-navbar-nav ">
-          <li class="uk-button-danger"> <a href="index.php?logout"><i class="uk-icon-circle-o-notch"></i></a></li> 
-          <li class="uk-button-danger"> <a href="#modalRegister" data-uk-modal><i class="uk-icon-sign-in"> SING IN</i></a></li> 
+            <li class="uk-button-danger"> <a href="index.php?logout"><i class="uk-icon-sign-out">SIGN OUT</i></a></li> 
+          <li class="uk-button-danger"> <a href="#modalRegister" data-uk-modal><i class="uk-icon-sign-in"> SIGN IN</i></a></li> 
           <li class="uk-button-danger"> <a href="#modalLogin" data-uk-modal><i class="uk-icon-user"> LOGIN </i></a></li>
 
         </ul>

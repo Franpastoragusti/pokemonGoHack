@@ -1,7 +1,7 @@
 <?php
-//require_once"inter_news.php";
+require_once"inter_news.php";
 require_once "class.bbdd.php";
-class News
+class News implements  Inter_news
 {
 	
 	public function getNewsByCategory($category){
@@ -73,10 +73,10 @@ class News
 	}
 
 
-		public function getTwoNewsByCategory($category){
+		public function getTwoNewsByCategory($category, $idActualNews){
 		$db=new Database;
 		$db->conectar();		
-		$query = $db->consulta("SELECT n.* FROM noticias n, pertenecen p WHERE n.id_noticias=p.id_noticia AND p.id_categoria='$category' ORDER BY n.fecha DESC LIMIT 2");
+		$query = $db->consulta("SELECT n.* FROM noticias n, pertenecen p WHERE n.id_noticias=p.id_noticia AND p.id_categoria='$category' AND n.id_noticias<>'$idActualNews' ORDER BY n.fecha DESC LIMIT 2");
  	    $db->disconnect();					
 		if($db->numero_de_filas($query) > 0) 
 		{		
