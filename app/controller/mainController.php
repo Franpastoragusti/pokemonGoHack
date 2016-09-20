@@ -96,7 +96,7 @@ class MainController{
 		$content = replace_uri('/\#NEWSID\#/ms' ,$data[0]["id_noticias"] , $content);
 		$content = replace_category('/\#CATEGORIAS\#/ms' ,$categoryFinal , $content);
 		switch ($categorias[0][0]) {
-			case "News":
+			case "Novedades":
 				$idCategory=1;
 				break;
 			case "Fails":

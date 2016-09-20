@@ -9,7 +9,7 @@
 
         <ul class="uk-navbar-nav">
             
-        <a href="index.php"><li class="logo"> <img src="app/view/img/pokeball.png" class="uk-animation-shake"> </li></a>
+        <a href="index.php"><li class="logo"> <img src="app/view/img/pokeball.png" class="uk-animation-shake"></li></a>
 
         </ul>
 
